@@ -1,0 +1,19 @@
+
+.ulLinks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: #ffffff; /* Color de texto blanco para contraste */
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.unLinks:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil al pasar el ratón */
+}
