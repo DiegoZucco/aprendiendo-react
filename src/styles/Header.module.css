@@ -1,0 +1,12 @@
+.headerH4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color: pink;
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.imgCart{
+    width: 30px;
+    height: 30px;
+}
