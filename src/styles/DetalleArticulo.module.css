@@ -1,0 +1,111 @@
+/* Contenedor principal de la página de detalles */
+.detalleContainer {
+    display: flex;
+    flex-direction: row; /* Columnas una al lado de la otra */
+    gap: 40px; /* Espacio entre la imagen y la información */
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px; /* Ancho máximo para no estirarse demasiado en pantallas grandes */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor para la imagen */
+.imagenContainer {
+    flex: 1; /* Ocupa 1 parte del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenContainer img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+/* Contenedor para la información del producto */
+.infoContainer {
+    flex: 1.5; /* Ocupa 1.5 partes del espacio (un poco más grande que la imagen) */
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 2.5rem; /* Título grande y llamativo */
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.categoria {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: capitalize;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 15px;
+    align-self: flex-start; /* Para que no ocupe todo el ancho */
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-size: 2.8rem; /* Precio muy visible */
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.botonAgregar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.botonAgregar:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para mensajes de carga y error */
+.mensaje, .mensajeError {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+.mensajeError {
+    color: #d9534f;
+}
+
+/* Responsive: para pantallas pequeñas, apila los elementos */
+@media (max-width: 768px) {
+    .detalleContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .precio {
+        font-size: 2.2rem;
+    }
+}

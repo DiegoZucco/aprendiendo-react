@@ -2,10 +2,11 @@
 .navBar {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
     padding: 1rem 0;
     position: sticky;
+    
    top: 0;
     z-index: 1;
 
