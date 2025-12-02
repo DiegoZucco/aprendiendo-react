@@ -1,7 +1,13 @@
+import { useContext } from 'react';
 import styles from '../styles/Carrito.module.css'; // Usamos el CSS que ya creamos
+import { CarritoContext } from "../Context/CarritoContext";
+
 
 // El componente solo recibe las props originales: carrito y vaciarCarrito
-const Carrito = ({ carrito, vaciarCarrito }) => {
+const Carrito = () => {
+    const { carrito, eliminarArticulo} = useContext(CarritoContext);
+
+
 
     // Mantenemos la lógica original para el carrito vacío
     if (carrito.length === 0) {
@@ -38,11 +44,11 @@ const Carrito = ({ carrito, vaciarCarrito }) => {
                         <div className={styles.itemActions}>
                             <button className={styles.checkoutButton} style={{fontSize: '0.9rem', padding: '8px 12px'}}>Comprar</button>
                             {/* Este botón llama a la función `vaciarCarrito` original */}
-                            <button 
-                                onClick={vaciarCarrito} 
+                            <button onClick={()=>eliminarArticulo(data)}
+                                
                                 className={styles.removeButton}
                             >
-                                Vaciar carrito
+                                eliminar producto
                             </button>
                         </div>
                     </li>

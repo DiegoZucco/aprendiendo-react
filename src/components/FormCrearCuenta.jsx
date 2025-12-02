@@ -1,26 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../Context/UserContext';
 
 const FormCrearCuenta = () => {
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) {
-      alert('Las contraseñas no coinciden.');
-      return;
-    }
-    // Aquí iría la lógica para enviar los datos al servidor
-    console.log('Cuenta a crear:', { nombre, email, password });
-    alert('¡Cuenta creada con éxito (simulado)!');
-    // Resetear formulario
-    setNombre('');
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
-  };
+ 
 
   return (
     <div className="form-container">
@@ -71,5 +53,4 @@ const FormCrearCuenta = () => {
     </div>
   );
 };
-
 export default FormCrearCuenta;

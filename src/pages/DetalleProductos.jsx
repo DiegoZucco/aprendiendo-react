@@ -1,9 +1,13 @@
 import DetalleArticulo from "../components/DetalleArticulo";
+import { useContext } from "react";
+import { CarritoContext } from "../Context/CarritoContext";
 
-const DetalleProductos = ({agregarAlCarrito,manejarAgregarCarrito})=> {
+const DetalleProductos = ()=> {
+const {manejarAgregarCarrito, estaLogueado} = useContext(CarritoContext);
+    
     return(
         <div>
-            <DetalleArticulo manejarAgregarCarrito={manejarAgregarCarrito} agregarAlCarrito={agregarAlCarrito}/>
+            <DetalleArticulo manejarAgregarCarrito={manejarAgregarCarrito} estaLogueado={estaLogueado}/>
         </div>
     );
 }

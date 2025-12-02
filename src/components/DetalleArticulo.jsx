@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../styles/DetalleArticulo.module.css'; // Crearemos este archivo para estilos
+import {CarritoContext} from '../Context/CarritoContext';
+
 
 // 1. Recibimos la prop `agregarAlCarrito`
-const DetalleArticulo = ({manejarAgregarCarrito}) => {
+const DetalleArticulo = () => {
+    const {manejarAgregarCarrito}= useContext(CarritoContext);
     // 2. Capturamos el ID de la URL. ¡Esto ya lo tenías!
     const { id } = useParams();
 

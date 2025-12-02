@@ -1,9 +1,12 @@
 import FormLogin from "../components/FormLogin";
 
-const PaginaLogin = ({login} )=>{
+const PaginaLogin = () => {
 
-    return(
-        <FormLogin login={login}/>
+
+    return (
+        <div>
+            <FormLogin/>
+        </div>
     );
 }
 

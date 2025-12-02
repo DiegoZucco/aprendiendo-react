@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../Context/UserContext';
+
 
 const FormLogin = () => {
+  const{login} = useContext(UserContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login attempt with:', { email, password });
-    // Aquí puedes añadir la lógica de autenticación
     alert(`Intentando iniciar sesión con ${email}`);
+    login()
   };
 
   return (
